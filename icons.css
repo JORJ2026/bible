@@ -1,0 +1,41 @@
+/* Icon system: inline SVG glyphs drawn by icons.js share one stroke weight and sit on the em box. */
+.ico{display:inline-block;flex:none;width:1em;height:1em;vertical-align:-.14em;overflow:visible;pointer-events:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;transition:transform .18s ease,color .18s ease}
+.ico.ico-solid{stroke-width:0}
+.has-icon{line-height:1}
+button.has-icon,summary.has-icon{line-height:1}
+button:not(.has-icon) > .ico,summary > .ico{margin-inline:0}
+
+/* Header and dialog buttons: icons scale with the button font size and lift on hover. */
+.tool-sidebar-toggle .ico,.help-tour-launch .ico,.tool-sidebar-heading button .ico,.dialog-close .ico,.music-panel-heading button .ico,.gallery-lightbox-close .ico,.help-tour-topline button .ico{width:1.05em;height:1.05em;stroke-width:2}
+.tool-sidebar-toggle:hover .ico,.help-tour-launch:hover .ico,.dialog-close:hover .ico,.tool-sidebar-heading button:hover .ico{transform:scale(1.08)}
+.tool-sidebar-toggle .ico{width:20px;height:20px}
+.help-tour-launch .ico{width:18px;height:18px}
+.dialog-close .ico{width:16px;height:16px;stroke-width:2.1}
+.tool-sidebar-heading button .ico{width:20px;height:20px}
+
+/* Chevrons: thin, muted, and turned by CSS where they open or close. */
+.select-chevron{display:inline-flex;align-items:center;justify-content:center;color:#8a6f45}
+.select-chevron .ico,.testament-chevron .ico,.book-chapter-toggle .ico{width:15px;height:15px;stroke-width:2.1}
+.testament-chevron{display:inline-flex;align-items:center;justify-content:center;color:#90764d}
+.testament-chevron .ico{width:16px;height:16px}
+.book-chapter-toggle .ico{width:13px;height:13px;stroke-width:2.4;transition:transform .18s ease}
+.book-chapter-toggle[aria-expanded="true"] .ico{transform:rotate(45deg)}
+
+/* Star and check toggles: solid when on, outline when off. */
+[aria-pressed="true"] > .ico.ico-starsolid,[aria-pressed="true"] > .ico.ico-solid{color:#9b6b1f}
+[aria-pressed="true"] > .ico.ico-boxchecked{color:#7f1d27}
+button[aria-pressed]:hover > .ico{transform:scale(1.1)}
+
+/* Play and pause: optical centering inside round or square buttons. */
+.ico.ico-play{transform:translateX(.06em)}
+.psalm-responsorial-play .ico,#midi-play .ico{width:.9em;height:.9em}
+.psalm-responsorial-play .ico-pause,#midi-play .ico-pause{transform:none}
+
+/* Prev and next text arrows keep their word and get a small slide on hover. */
+#psalm-previous:hover .ico,.verse-nav-button:hover .ico,#previous-verse:hover .ico{transform:translateX(-2px)}
+#psalm-next:hover .ico,#next-verse:hover .ico{transform:translateX(2px)}
+#psalm-previous .ico,#psalm-next .ico,#previous-verse .ico,#next-verse .ico,#help-tour-detail-back .ico{width:.95em;height:.95em}
+.chapter-heading-with-actions button .ico{width:1em;height:1em}
+
+/* Glyph-only icon buttons get a consistent focus ring. */
+button.has-icon:focus-visible,summary.has-icon:focus-visible{outline:2px solid #a88e5d;outline-offset:2px}

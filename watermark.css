@@ -1,0 +1,2 @@
+/* Faint credit mark, bottom right. */
+.site-credit{position:fixed;right:10px;bottom:6px;z-index:0;margin:0;color:#ececec;font:300 9px/1 'DM Sans',sans-serif;letter-spacing:.08em;pointer-events:none;user-select:none}

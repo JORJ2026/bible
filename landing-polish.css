@@ -1,0 +1,67 @@
+/* Landing-page polish: spacing, type, focus, and motion refinements on top of style.css. */
+:root{--polish-ease:cubic-bezier(.2,.7,.2,1);--polish-focus:#a88e5d}
+html{-webkit-text-size-adjust:100%;text-rendering:optimizeLegibility}
+body{-webkit-font-smoothing:antialiased}
+::selection{background:#e6d3a8;color:#2e2a22}
+:focus-visible{outline:2px solid var(--polish-focus);outline-offset:2px}
+button,select,input,summary{-webkit-tap-highlight-color:transparent}
+button{transition:background-color .18s var(--polish-ease),border-color .18s var(--polish-ease),color .18s var(--polish-ease),transform .12s var(--polish-ease)}
+button:active{transform:translateY(1px)}
+button:disabled{cursor:default;opacity:.45}
+.topline{border-radius:0;letter-spacing:.01em}
+.topline>.brand-name{transition:color .2s ease}
+.topline>.brand-name:hover{color:#5c1419!important}
+#book-search{transition:border-color .18s ease,box-shadow .18s ease}
+#book-search:hover{border-color:#c4ae85}
+#book-search:focus{border-color:#8a5b36;box-shadow:0 0 0 3px rgba(138,91,54,.14)}
+#book-search::placeholder{font-style:italic;letter-spacing:.01em}
+.book-search-results{border-radius:0 0 6px 6px}
+.book-search-option{transition:background-color .15s ease}
+.book-search-empty{font-style:italic}
+#show-random-toggle{letter-spacing:.02em;transition:background-color .18s ease,color .18s ease,box-shadow .18s ease}
+#show-random-toggle[aria-pressed="true"]{box-shadow:inset 0 -2px 0 #7f1d27}
+.help-tour-launch{transition:background-color .18s ease,border-color .18s ease,transform .12s ease}
+.help-tour-launch:hover{transform:translateY(-1px)}
+.tool-sidebar-toggle{transition:background-color .18s ease,border-color .18s ease,transform .12s ease}
+.tool-sidebar-toggle:active{transform:scale(.96)}
+.intro{box-shadow:0 1px 0 rgba(117,91,56,.08)}
+.intro h1{text-wrap:balance}
+.eyebrow{color:#7d6540;letter-spacing:.2em}
+.chapter-title h3{text-wrap:balance;font-feature-settings:"liga","kern"}
+.chapter-title span{letter-spacing:.04em;font-variant-numeric:tabular-nums}
+.reading>.section-heading{position:relative}
+.book-directory{position:relative}
+.book-directory-groups{gap:18px 28px}
+.testament-group{transition:border-color .2s ease,background-color .2s ease}
+.testament-group[open]{border-color:rgba(117,91,56,.3)}
+.testament-heading{transition:background-color .18s ease,color .18s ease}
+.testament-heading:hover{background:rgba(117,91,56,.06);color:#5b4527}
+.testament-count{font-variant-numeric:tabular-nums;letter-spacing:.06em}
+.testament-links{padding-bottom:12px}
+.book-link{transition:color .15s ease,background-color .15s ease;border-radius:2px}
+.book-link:hover{background:rgba(117,91,56,.05)}
+.book-link[aria-current="page"]{background:rgba(127,29,39,.06)}
+.book-link:focus-visible{outline:2px solid var(--polish-focus);outline-offset:1px}
+.book-number{font-variant-numeric:tabular-nums;color:#a08a68}
+.select-wrap{position:relative;transition:box-shadow .18s ease}
+.select-wrap:focus-within{box-shadow:0 0 0 3px rgba(168,142,93,.22)}
+.select-wrap select{transition:border-color .18s ease,background-color .18s ease}
+.select-wrap select:hover{border-color:#c9b48c}
+.select-chevron{transition:transform .2s var(--polish-ease)}
+.select-wrap:hover .select-chevron{transform:translateY(1px)}
+.our-father-scroll{transition:border-color .3s ease}
+.our-father-scroll:hover{border-color:#d4c7a8!important}
+.saved-summary{font-variant-numeric:tabular-nums;color:#7f1d27;font-weight:600;letter-spacing:.02em}
+.export-actions button{letter-spacing:.03em;transition:background-color .16s ease,color .16s ease}
+.export-actions button:not(:disabled):hover{color:#7f1d27}
+.translation-toggle,.intro-actions .search-toggle{transition:background-color .18s ease,border-color .18s ease,transform .12s ease}
+.translation-toggle:hover,.intro-actions .search-toggle:hover{transform:translateY(-1px)}
+.tool-sidebar-panel{box-shadow:12px 0 36px rgba(40,28,14,.14)}
+.tool-sidebar-heading h2{letter-spacing:.01em}
+.tool-sidebar .sidebar-actions>*{transition:background-color .16s ease,border-color .16s ease}
+.tool-sidebar-backdrop{transition:opacity .2s ease}
+.gallery-lightbox-close{transition:background-color .18s ease}
+.dialog-close{transition:background-color .18s ease,color .18s ease,border-color .18s ease}
+.dialog-close:hover{background:#efe4cd;color:#7f1d27}
+.dialog-heading .eyebrow{letter-spacing:.18em}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;scroll-behavior:auto!important}}
